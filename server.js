@@ -35,7 +35,7 @@ app.post('/contact', (req, res) => {
     const mailOpts = {
       from: 'Your sender info here', // This is ignored by Gmail
       to: BUSINESS_EMAIL,
-      subject: 'Kullas Website Creation Contact From',
+      subject: 'Kullas Vending Solutions Contact From',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
     }
   
