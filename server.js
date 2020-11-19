@@ -1,4 +1,5 @@
 var express = require("express");
+import sslRedirect from 'heroku-ssl-redirect';
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
@@ -7,6 +8,9 @@ const GMAIL_PASS = process.env.GMAIL_PASS;
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL;
  
 var app = express();
+
+// enable ssl redirect
+app.use(sslRedirect());
 
 app.use(bodyParser.urlencoded({extended: true}));
  
