@@ -1,5 +1,5 @@
-var express = require("express");
 var sslRedirect = require('heroku-ssl-redirect');
+var express = require("express");
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
